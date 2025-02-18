@@ -1,0 +1,7 @@
+Lookback (Days),% of Total Data Used,Pros,Cons,Best Use
+7,1.6% - 3.2%,Captures very recent momentum,Ignores broader market trends,Ultra-short-term trading
+14,1.6% - 3.2%,Captures very recent momentum,Ignores broader market trends,Ultra-short-term trading
+30,7%,Balances short-term patterns with market trends,May miss longer trends,"Monthly cycles, swing trading"
+60,14%,"Captures stronger trends, avoids noise",Less responsive to sudden market shifts,Medium-term forecasting
+90,21%,Captures quarterly Bitcoin cycles,May lag behind rapid trend reversals,Institutional investor analysis
+180,42%,"Includes half the dataset, strong for long-term trends",Too slow to react to short-term changes,Long-term investment predictions

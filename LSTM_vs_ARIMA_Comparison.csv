@@ -1,0 +1,7 @@
+Metric,LSTM,ARIMA
+MAE,160.56,1790.28
+RMSE,160.87,2109.42
+MAPE,0.004,0.0453
+Training Time (s),49.74,1.55
+Inference Time (s),0.1971,0.01
+Avg Time per Prediction (s),0.0197,0.00091
