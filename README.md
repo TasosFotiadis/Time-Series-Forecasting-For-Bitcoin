@@ -1,38 +1,55 @@
-# Time-Series-Forecasting-For-Bitcoin
-# Bitcoin Price Prediction Using Neural Networks
+## Overview
+This project focuses on forecasting Bitcoin’s daily closing prices using neural networks and time series analysis techniques. The dataset consists of minute-level Bitcoin price data from January 1, 2021, to March 1, 2022. The model is trained to predict the closing prices for the last ten days of February 2022 using historical trends.
 
-## Neuro-Fuzzy Computing Final Project
+## Objectives
+- Process and clean Bitcoin price data for accurate time series forecasting.
+- Convert Unix timestamps to human-readable datetime format.
+- Resample high-frequency data to daily closing prices to improve efficiency.
+- Engineer time-based features to capture temporal dependencies.
+- Train and evaluate a neural network model for price forecasting.
+- Compare the performance of LSTM and ARIMA models using standard evaluation metrics.
 
-This repository contains a project on Bitcoin price forecasting using neural networks and time series analysis. The objective is to predict the daily closing price of Bitcoin based on historical data. The project was completed as part of the Neuro-Fuzzy Computing course.
+## Features
+1. **Data Preprocessing**:
+   - Converted timestamps from Unix format to standard datetime.
+   - Resampled minute-level data to daily closing prices to focus on long-term trends.
+   - Identified and handled missing values using interpolation.
+   - Engineered additional features such as `day_of_week`, `month`, and `year` to capture seasonal effects.
 
----
+2. **Exploratory Analysis**:
+   - Analyzed trading patterns and volatility across different timeframes.
+   - Investigated the impact of lookback window size on model accuracy.
 
-## Project Structure
+3. **Model Development**:
+   - Implemented an LSTM-based deep learning model for sequential forecasting.
+   - Applied ARIMA as a statistical benchmark model for comparison.
 
-- `Bitcoin-Time-Series-Forecasting-Project` – Jupyter Notebook containing data preprocessing, model training, and predictions.
-- `Project Report.pdf` – Detailed LaTeX report discussing methodology, results, and conclusions.
-- `bitcoin_data.csv.zip` - Historical Bitcoin price data from January 1, 2021, to March 1, 2022.
-- `LSTM_vs_ARIMA_Comparison.csv` - Comparison of LSTM and ARIMA models based on MAE, RMSE, MAPE, training, and inference time
-- `lookback_analysis.csv` - Analysis of different lookback periods for time series forecasting
-- `LICENSE` – Project license.
+4. **Model Evaluation**:
+   - Compared LSTM and ARIMA using Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and Mean Absolute Percentage Error (MAPE).
+   - Evaluated training and inference time for both models.
 
----
+5. **Forecasting**:
+   - Predicted Bitcoin prices for the last ten days of February 2022.
 
-## Methodology
+## Results
+- LSTM provided better accuracy than ARIMA, achieving lower MAE and MAPE values.
+- ARIMA was computationally efficient with significantly lower training and inference time.
+- The choice between LSTM and ARIMA depends on whether accuracy or speed is prioritized.
 
-### Dataset
-- The dataset consists of Bitcoin price data at a minute-level frequency.
-- Data is sourced from January 1, 2021, to March 1, 2022.
-- The target variable is the daily closing price of Bitcoin.
-- Preprocessing steps include:
-  - Conversion of timestamps from Unix format to human-readable datetime.
-  - Resampling to daily closing prices to focus on long-term trends.
-  - Handling of missing values through interpolation if necessary.
-  - Feature engineering with additional time-based variables to enhance model performance.
+## Tools and Technologies
+- **Languages**: Python
+- **Libraries**: TensorFlow, scikit-learn, statsmodels, pandas, matplotlib
+- **Techniques**: Time Series Analysis, ARIMA, LSTM, Feature Engineering
 
-### Neural Network Model
-- Time series forecasting techniques are applied using a neural network-based approach.
-- The model is trained on historical data to predict Bitcoin prices.
-- The performance is evaluated by forecasting prices for the last ten days of February 2022.
+## Files Included
+1. `Bitcoin-Time-Series-Forecasting.ipynb`: Jupyter Notebook containing data preprocessing, model training, and evaluation.
+2. `Project Report.pdf`: Detailed LaTeX report discussing methodology and results.
+3. `lookback_analysis.csv`: Analysis of different lookback periods and their impact on model performance.
+4. `LSTM_vs_ARIMA_Comparison.csv`: Comparison of LSTM and ARIMA models based on accuracy and computational efficiency.
+5. `bitcoin_data.csv.zip`: The dataset of Bitcoin prices and other features.
 
-
+## How to Use
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/TasosFotiadis/Time-Series-Forecasting-For-Bitcoin.git
+   cd Time-Series-Forecasting-For-Bitcoin
